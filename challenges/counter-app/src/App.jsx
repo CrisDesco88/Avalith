@@ -20,7 +20,7 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-            <img src={logo} className="App-logo animate__bounceInLeft" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
             <h1 className='mainTitle'>Counter App</h1>
             <div className='counterContainer'>
               <h2 className='counterDisplay'>{counter}</h2>
