@@ -7,7 +7,7 @@ export const GifGrid = ({ category, removeCategoryBtn }) => {
 
   return (
     <>
-      <h2 className="cat-title">Category:{category}</h2>
+      <h2 className="cat-title">Category:<span>{category}</span></h2>
       <div> {removeCategoryBtn} </div>
       <div className="card-grid">
         {loading ? (
