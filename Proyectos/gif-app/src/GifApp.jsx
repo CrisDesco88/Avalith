@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import PropTypes from 'prop-types';
+
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 import RemoveCategoryBtn from "./components/RemoveCategoryBtn";
@@ -19,7 +21,7 @@ export const GifApp = () => {
       categories.filter((category) => category !== categoryToRemove)
     )
   }
-
+  
   return (
     <>
       <div className="header">
@@ -44,3 +46,11 @@ export const GifApp = () => {
     </>
   );
 };
+
+GifApp.propTypes = { 
+  categories: PropTypes.array,
+  handleAddCategory: PropTypes.func,
+  handleRemoveCategory: PropTypes.func,
+  handleResetAllCategories: PropTypes.func
+
+}
