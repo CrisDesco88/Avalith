@@ -1,18 +1,16 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { AddCategory } from "../../src/components/AddCategory";
 
-describe('Test en <AddCAtegory/>', () => {
+describe('Test en <AddCategory/>', () => {
 
     test('Debe cambiar el valor del input', () => { 
         
         render(<AddCategory addCategory={()=>{}}/>);
 
-        // screen.debug();
-
         const input = screen.getByRole('textbox');
 
         fireEvent.change( input, {target: {value: 'Goku'}});
-        // screen.debug();
+        
         expect(input.value).toBe('Goku');
      });
 

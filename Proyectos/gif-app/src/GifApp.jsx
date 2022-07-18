@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
-import RemoveCategoryBtn from "./components/RemoveCategoryBtn";
+import {RemoveCategoryBtn} from "./components/RemoveCategoryBtn";
 import { ResetCategoriesBtn } from "./components/ResetCategoriesBtn";
 
 export const GifApp = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RemoveCategoryBtn({ handler, category }) {
+export const RemoveCategoryBtn = ({ handler, category }) => {
   return (
     <>
       <button className="delete-category-btn" onClick={() => handler(category)}>
@@ -8,4 +8,4 @@ export default function RemoveCategoryBtn({ handler, category }) {
       </button>
     </>
   );
-}
+};
