@@ -155,9 +155,10 @@ export function doWhile(numero) {
   let i = 0;
 
   do {
-    i = i + 1;
+    i++;
     result = result + 5;
-    
+
   } while (i < 8);
+
   return result
 }
