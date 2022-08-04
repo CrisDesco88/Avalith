@@ -92,57 +92,76 @@ export function multiplicarArgumentos() {
 
 export function cuentoElementos(arreglo){
  // Tu código:
- 
- return;
+ const graters = arreglo.filter(elemento => elemento > 18)
+ return graters.length;
 }
 
 
 export function diaDeLaSemana(numeroDeDia) {
-  // Tu código:
- 
-
-  return;
+  if(numeroDeDia > 7) return;
+  if(numeroDeDia === 1 || numeroDeDia === 7) {
+    return "Es fin de semana"
+  }else{
+    return 'Es dia Laboral'
+  }
 } 
 
 
 export function empiezaConNueve(n) {
- // Tu código:
-    
-  return;  
+  const numberArr = Array.from(String(n))
+ if(numberArr[0] === "9") {
+   return true
+ }else { 
+  return false
+ } 
 }
 
 
 export function todosIguales(arreglo) {
- // Tu código:
- 
-  return;
+  const firstItem = arreglo[0];
+  function checkEquality(item) {
+    if(item === firstItem) {
+      return true
+    } else {
+      return false
+    }
+  }
+  return arreglo.every(checkEquality)
 } 
 
 
 export function mesesDelAño(array) {  
-  // Tu código:
- 
-  return;
+  const mesesOk = ["Marzo", "Noviembre", "Enero"];
+  const auxArray = [...new Set(array.filter(mesDelArray => mesesOk.includes(mesDelArray)))] 
+  return auxArray.length === 3 ? auxArray : "No se encontraron los meses pedidos"
 }
 
 
 export function mayorACien(array) {
-  // Tu código:
 
-  return;
+  return array.filter(numero => numero > 100);
+  
 }
 
 
-export function breakStatement(numero) {
-  // Tu código:
-
-  return;
+export function breakStatement(numero) { 
+  const array = [];
+  for(let i=0; i < 10; i++) {
+    numero+=2
+    array.push(numero)
+    if(i === numero) return 'Se interrumpió la ejecución'
+  }
+  return array 
 }
 
 
 export function continueStatement(numero) {
-  // Tu código:
-
-  return;
+  const array = [];
+  for(let i=0; i < 9; i++) {
+    numero+=2
+    array.push(numero)
+    if(i === 5) {continue};
+  }
+  return array 
 }
 
