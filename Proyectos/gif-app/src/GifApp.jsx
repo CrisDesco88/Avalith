@@ -27,6 +27,7 @@ export const GifApp = () => {
       <div className="header">
         <h1 data-text="GifApp" className="light">
           GifApp
+          {import.meta.env.API_KEY}
         </h1>
         <AddCategory addCategory={handleAddCategory} />
         <ResetCategoriesBtn handler={handleResetAllCategories}/>
